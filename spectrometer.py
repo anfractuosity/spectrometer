@@ -18,7 +18,8 @@ class Spectrometer:
                 s = 0.0
                 c = 0
                 for y in range(height):
-                    s += (int(a[y][x][0]) + int(a[y][x][1]) + int(a[y][x][2]))/3.0
+                    s += (int(a[y][x][0]) + int(a[y][x][1]) + int(a[y][x][2]))/3.0 # average 
+                    #s += 0.21*int(a[y][x][0]) + 0.72*int(a[y][x][1]) + 0.07*int(a[y][x][2]) # luminosity
                     c += 1.0
                 pixels.append(s/c)
             self.spectra[img] = pixels
